@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,14 @@ import { GoalsComponent } from './goals/goals.component';
 import { NutritionComponent } from './nutrition/nutrition.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SettingsComponent } from './settings/settings.component';
+import { SettingsService } from './settings/settings.service';
+import { StorageService } from './storage/storage.service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { BackgroundGradientComponent } from './background-gradient/background-gradient.component';
+import { SafePipe } from './pipes/safe.pipe';
+import { UrlSafePipe } from './pipes/url-safe.pipe';
 
 @NgModule({
   declarations: [
@@ -19,14 +28,24 @@ import { NotFoundComponent } from './not-found/not-found.component';
     GoalsComponent,
     NutritionComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SettingsComponent,
+    NavbarComponent,
+    FooterComponent,
+    BackgroundGradientComponent,
+    SafePipe,
+    UrlSafePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    SettingsService,
+    StorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
