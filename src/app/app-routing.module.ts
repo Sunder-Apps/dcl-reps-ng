@@ -6,6 +6,7 @@ import { GoalsComponent } from './goals/goals.component';
 import { EquipmentComponent } from './equipment/equipment.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NutritionComponent } from './nutrition/nutrition.component';
+import { WorkoutsComponent } from './workouts/workouts.component';
 
 
 const routes: Routes = [
@@ -42,7 +43,14 @@ const routes: Routes = [
     path: 'nutrition',
     component: NutritionComponent,
     data: {
-      animation: 'goals'
+      animation: 'nutrition'
+    }
+  },
+  {
+    path: 'workouts',
+    component: WorkoutsComponent,
+    data: {
+      animation: 'workouts'
     }
   },
   {

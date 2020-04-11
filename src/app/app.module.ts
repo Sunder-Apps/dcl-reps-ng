@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BackgroundGradientComponent } from './background-gradient/background-gradient.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { UrlSafePipe } from './pipes/url-safe.pipe';
+import { WorkoutsComponent } from './workouts/workouts.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +36,15 @@ import { UrlSafePipe } from './pipes/url-safe.pipe';
     FooterComponent,
     BackgroundGradientComponent,
     SafePipe,
-    UrlSafePipe
+    UrlSafePipe,
+    WorkoutsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatTooltipModule
   ],
   providers: [
     SettingsService,
