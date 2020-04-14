@@ -1,2 +1,40 @@
 <h3>Workouts</h3>
-<p>This is where the fun begins.</p>
+<div *ngFor="let workout of plan; let i = index">
+    <h6>Day {{ i + 1 }}</h6>
+    <div class="title">
+        <mat-chip-list>
+            <mat-chip>{{ workout.theme }}</mat-chip>
+        </mat-chip-list>
+        <h4>{{ workout.description }}</h4>
+    </div>
+    <div class="section" *ngFor="let section of workout.sections">
+        <h5>{{ section.name }}</h5>
+        <div class="reps" *ngFor="let rep of section.reps">
+            <mat-chip-list *ngIf="rep.amount; else noReps">
+                <mat-chip>{{ rep.amount }}</mat-chip>
+            </mat-chip-list>
+            <ng-template #noReps>
+                <mat-chip-list class="hidden">
+                    <mat-chip></mat-chip>
+                </mat-chip-list>
+            </ng-template>
+            <div class="brace" [class.hidden]="!rep.amount">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="rep">
+                <div class="exercise" *ngFor="let exercise of rep.exercises">
+                    <mat-chip-list *ngIf="exercise.amount; else noAmount">
+                        <mat-chip>{{ exercise.amount }}</mat-chip>
+                    </mat-chip-list>
+                    <ng-template #noAmount>
+                        <mat-chip-list class="hidden">
+                            <mat-chip></mat-chip>
+                        </mat-chip-list>
+                    </ng-template>
+                    <p>{{ exercise.name }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
