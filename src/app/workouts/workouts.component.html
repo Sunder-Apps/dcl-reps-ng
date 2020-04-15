@@ -1,7 +1,7 @@
 <h3>Workouts</h3>
-<div *ngFor="let workout of plan; let i = index">
-    <h6>Day {{ i + 1 }}</h6>
-    <div class="title">
+<div class="day" [class.open]="workout.open" *ngFor="let workout of plan; let i = index">
+    <div class="title" (click)="workout.open = !workout.open">
+        <h6>Day {{ i + 1 }}</h6>
         <mat-chip-list>
             <mat-chip>{{ workout.theme }}</mat-chip>
         </mat-chip-list>
