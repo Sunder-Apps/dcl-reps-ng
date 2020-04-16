@@ -9,6 +9,7 @@
     </div>
     <div class="section" *ngFor="let section of workout.sections">
         <h5>{{ section.name }}</h5>
+        <p>{{ section.description }}</p>
         <div class="reps" *ngFor="let rep of section.reps">
             <mat-chip-list *ngIf="rep.amount; else noReps">
                 <mat-chip>{{ rep.amount }}</mat-chip>
