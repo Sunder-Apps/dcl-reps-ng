@@ -883,6 +883,354 @@ export class WorkoutsComponent implements OnInit {
               ]
             }
           ]
+        },
+        {
+          theme: "EXTERMINATE",
+          description: "KB Conditioning, Steady State Cardio, Boxing Technique, Balance",
+          sections: [
+            {
+              name: "Warm Up",
+              reps: [
+                {
+                  exercises: [
+                    {
+                      amount: "3 rounds",
+                      name: "Jump rope"
+                    },
+                    {
+                      amount: "10 per direction",
+                      name: "Hip Swings"
+                    },
+                    {
+                      amount: "3 minutes",
+                      name: "Shadowboxing"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              name: "Cardio Firepower",
+              reps: [
+                {
+                  amount: "x5",
+                  exercises: [
+                    {
+                      amount: "10",
+                      name: "2 Hand KB Swings"
+                    },
+                    {
+                      amount: "10 sec",
+                      name: "Rest"
+                    }
+                  ]
+                },
+                {
+                  amount: "x5",
+                  exercises: [
+                    {
+                      amount: "10 per arm",
+                      name: "1 Arm KB Swings"
+                    },
+                    {
+                      amount: "10 sec",
+                      name: "Rest"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              name: "Rest 5 Minutes",
+              reps: [
+                {
+                  exercises: [
+                    {
+                      amount: "30 min",
+                      name: "Run (75% intensity - aerobic capacity)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              name: "PM",
+              reps: [
+                {
+                  amount: "x3",
+                  exercises: [
+                    {
+                      amount: "3 min",
+                      name: "Heavy Bag"
+                    }
+                  ]
+                },
+                {
+                  exercises: [
+                    {
+                      amount: "5 min",
+                      name: "Balance Work"
+                    },
+                    {
+                      amount: "10 min",
+                      name: "Static Stretching"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      theme: "SURVIVE",
+      description: "Yoga, Breath, Cardio",
+      sections: [
+        {
+          name: "Yoga",
+          reps: [
+            {
+              exercises: [
+                {
+                  amount: "1 hour",
+                  name: "Practice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "Breath",
+          reps: [
+            {
+              amount: "x4",
+              exercises: [
+                {
+                  amount: "10 sec",
+                  name: "Inhale"
+                },
+                {
+                  amount: "7 sec",
+                  name: "Hold"
+                },
+                {
+                  amount: "8 sec",
+                  name: "Exhale"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "Cardio",
+          reps: [
+            {
+              exercises: [
+                {
+                  amount: "10 min",
+                  name: "Farmer Carry"
+                },
+                {
+                  amount: "5 per side",
+                  name: "Turkish get up"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "Pro Tip",
+          description: "It is imperative that you switch up your workouts to train each of your metabolic pathways and aerobic or anaerobic systems. For example, sprinting, one rep maxing, anything needing energy (ATP) very quickly and explosively for max power output for a short amount of time is training your PHOSPHAGEN PATHWAY, which is anaerobic. The second level is your GLYCOLITIC PATHWAY, which uses… you guessed it.. GLYCOGEN (basically, carbs / sugar) for energy. This is expressed by doing working at slightly less intensity for slightly longer, such as; a HIIT program, a bodybuilding workout, a 500 meter run.. think of this as the middle gear. Finally, a more endurance based, longer form and lower intensity cardio, such as an hour jog, row, or swim, is working your OXIDATIVE PATHWAY, which is aerobic. All 3 systems are usually all working at once, just the type of training you are doing dictates what will take over. For optimal results & cardiovascular health (especially in the wake of this virus which negatively affects these areas) it is wise to train every pathway. Which we are. You’re welcome."
+        }
+      ]
+    },
+    {
+      theme: "SABBATH",
+      description: "Rest, Recover, Fast, Read, Create, Dominate",
+      sections: [
+        {
+          reps: [
+            {
+              exercises: [
+                {
+                  amount: "Listen",
+                  name: "Revolution of the Mind by James Brown"
+                }
+              ]
+            },
+            {
+              exercises: [
+                {
+                  amount: "Read",
+                  name: "War of Art by Steven Pressfield"
+                }
+              ]
+            },
+            {
+              exercises: [
+                {
+                  amount: "Quote",
+                  name: "&ldquo;Our bodies are our gardens; our wills are our gardeners.&rdquo; &mdash; Shakespeare"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          description: "Keep grinding, freaks.  Stay strong.  Get this screwdriver out of my head!!"
+        }
+      ]
+    },
+    {
+      theme: "KILL",
+      description: "Zombie killing combat, isometrics, gymnastics & movement",
+      sections: [
+        {
+          name: "Warm Up",
+          reps: [
+            {
+              exercises: [
+                {
+                  amount: "5 min",
+                  name: "Shadowboxing"
+                },
+                {
+                  amount: "5 min",
+                  name: "Jump Rope"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "Movement Circuit",
+          description: "In whatever space you have, use back and forth as one length for each movement. If you are outside, approximate about 30 seconds for each.",
+          reps: [
+            {
+              exercises: [
+                {
+                  name: "Bear Crawl"
+                },
+                {
+                  name: "Spiderman Crawl"
+                },
+                {
+                  name: "Inch Worm"
+                },
+                {
+                  name: "Lizard Walk"
+                },
+                {
+                  name: "Long Jumps"
+                },
+                {
+                  name: "Walking Lunge w/ Half Moon Balance"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "Combat",
+          reps: [
+            {
+              exercises: [
+                {
+                  amount: "5 min",
+                  name: "Kickboxing Combox"
+                },
+                {
+                  amount: "5 per leg",
+                  name: "Pistol Squats"
+                },
+                {
+                  amount: "5 per leg",
+                  name: "Stationary Plyo Lunges"
+                },
+                {
+                  amount: "5 per leg",
+                  name: "Reverse Walking Lunge w/ Twist"
+                },
+                {
+                  amount: "5 min",
+                  name: "Kickboxing Combos"
+                },
+                {
+                  amount: "10",
+                  name: "Jump Squats"
+                },
+                {
+                  amount: "5",
+                  name: "Sprints"
+                },
+                {
+                  amount: "5 per side",
+                  name: "Lateral Lunges"
+                },
+                {
+                  amount: "5 min",
+                  name: "Kickboxing Combos"
+                },
+                {
+                  amount: "Max",
+                  name: "Fingertip Pushups"
+                },
+                {
+                  amount: "Max",
+                  name: "Clapping Pushups"
+                },
+                {
+                  amount: "Max",
+                  name: "Isometric pushup hold"
+                },
+                {
+                  amount: "5 min",
+                  name: "Kickboxing Combos"
+                },
+                {
+                  amount: "Max",
+                  name: "Explosive Pull Ups"
+                },
+                {
+                  amount: "Max",
+                  name: "1 Arm Chin Ups"
+                },
+                {
+                  amount: "Max",
+                  name: "Toes to Bar"
+                },
+                {
+                  amount: "Max",
+                  name: "Wall Sit or Chair Pose Hold"
+                },
+                {
+                  amount: "Max",
+                  name: "Front Lever"
+                },
+                {
+                  amount: "Max",
+                  name: "Pull Up Hold"
+                },
+                {
+                  amount: "Max",
+                  name: "Handstand Hold"
+                },
+                {
+                  amount: "Max per leg",
+                  name: "One Leg Balance Hold"
+                },
+                {
+                  amount: "5 min",
+                  name: "Double Under Practice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "PM",
+          description: "Static stretching, light cardio"
         }
       ]
     }
