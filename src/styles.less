@@ -16,6 +16,7 @@ app-root {
 main {
     position: relative;
     min-height: 100vh;
+    padding-bottom: 200px;
 }
 
 *, *::before, *::after {
@@ -49,6 +50,37 @@ input {
     width: 100%;
 }
 
+span {
+    vertical-align: middle;
+    margin: 0 5px;
+    color: var(--action);
+    font-size: 1.5em;
+    font-family: 'Metal Mania';
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+td {
+    padding: 20px 0;
+    &:nth-child(1) {
+        padding-right: 20px;
+        text-align: right;
+        font-size: 1.6em;
+        line-height: 35px;
+        
+        span {
+            color: var(--fore);
+        }
+    }
+    &:nth-child(2) {
+        padding-left: 20px;
+    }
+}
+
 // Text Styles
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
@@ -70,9 +102,15 @@ h3 {
     font-size: 60px;
 }
 
+h4 {
+    color: var(--action);
+    font-size: 40px;
+}
+
 p {
     font-size: 1em;
     text-align: left;
+    line-height: 30px;
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
