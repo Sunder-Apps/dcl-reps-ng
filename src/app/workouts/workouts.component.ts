@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Workout } from './workout';
+import { WorkoutsService } from './workouts.service';
 
 @Component({
   selector: 'app-workouts',
@@ -8,21 +9,18 @@ import { Workout } from './workout';
 })
 export class WorkoutsComponent implements OnInit {
   plan: Workout[] = []
-  constructor() { }
-  ngOnInit() { }
 
-  loadWorkout (e) : void {
-    console.log('loadWorkout', e.target.files[0]);
-    let fileReader = new FileReader();
-    fileReader.onload = (e) => {
-      console.log(fileReader.result);
-      if (fileReader.result) {
-        let json = JSON.parse(fileReader.result.toString());
-        if (json) {
-          this.plan = json;
-        }
-      }
-    }
-    fileReader.readAsText(e.target.files[0])
+  constructor(private workoutsService:WorkoutsService) {
+    this.workoutsService.activePlan.subscribe(plan => {
+      this.plan = plan;
+    });
+  }
+
+  ngOnInit () {
+    this.workoutsService.setActivePlan(this.workoutsService.activeIndex);
+  }
+
+  loadPlan (e) {
+    this.workoutsService.loadPlan(e);
   }
 }
