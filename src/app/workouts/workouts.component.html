@@ -1,4 +1,4 @@
-<h3>Workouts</h3>
+<h3 class="glitch" glitch="Workouts">Workouts</h3>
 <div class="plan" *ngIf="this.plan.length; else noWorkouts">
     <div class="day" [class.open]="workout.open" *ngFor="let workout of plan; let i = index">
         <div class="title" (click)="workout.open = !workout.open">

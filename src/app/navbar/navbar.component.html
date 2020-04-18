@@ -4,19 +4,24 @@
             <img src="https://i.imgur.com/8kHKvAW.jpg" />
             <h1>28 Reps<br/><span>Later</span></h1>
         </div>
-        <ul>
-            <li><a routerLink="/workouts/" routerLinkActive="active">Workouts</a></li>
-            <li><a routerLink="/overview/" routerLinkActive="active">Overview</a></li>
-            <li><a routerLink="/equipment/" routerLinkActive="active">Equipment</a></li>
-            <li><a routerLink="/goals/" routerLinkActive="active">Goals</a></li>
-            <li><a routerLink="/nutrition/" routerLinkActive="active">Nutrition</a></li>
-            <li><a href="mailto:zak@deathcomeslifting.com">Contact</a></li>
-            <li>
-                <div>
-                    <a href="https://www.instagram.com/deathcomeslifting/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/deathcomeslifting/"><i class="fab fa-facebook"></i></a>
-                </div>
-            </li>
-        </ul>
+        <div>
+            <button  class="toggle" [class.open]="this.open" (click)="this.open = !this.open"><span></span></button>
+        </div>
+        <div class="menu" [class.open]="this.open">
+            <ul>
+                <li><a routerLink="/workouts/" routerLinkActive="active">Workouts</a></li>
+                <li><a routerLink="/overview/" routerLinkActive="active">Overview</a></li>
+                <li><a routerLink="/equipment/" routerLinkActive="active">Equipment</a></li>
+                <li><a routerLink="/goals/" routerLinkActive="active">Goals</a></li>
+                <li><a routerLink="/nutrition/" routerLinkActive="active">Nutrition</a></li>
+                <li><a href="mailto:zak@deathcomeslifting.com">Contact</a></li>
+                <li>
+                    <div>
+                        <a href="https://www.instagram.com/deathcomeslifting/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/deathcomeslifting/"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </nav>
 </div>

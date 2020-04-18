@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.less']
 })
 export class NavbarComponent implements OnInit {
-
+  open: boolean = false
   constructor() { }
 
   ngOnInit() { }
