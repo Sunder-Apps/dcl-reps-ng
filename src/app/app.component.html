@@ -1,6 +1,21 @@
-<app-navbar></app-navbar>
-<main [@routeAnimations]="prepareRoute(outlet)">
-  <router-outlet #outlet="outlet"></router-outlet>
-</main>
-<app-footer></app-footer>
-<app-background-gradient></app-background-gradient>
+<div *ngIf="this.signedIn; else logIn">
+  <app-navbar></app-navbar>
+  <main [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </main>
+  <app-footer></app-footer>
+  <app-background-gradient></app-background-gradient>
+</div>
+
+<ng-template #logIn>
+  <div id="logIn">
+    <img src="https://i.imgur.com/8kHKvAW.jpg" />
+    <h1 class="glitch" glitch="WARNING">WARNING</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>ENTER THE PASSWORD</mat-label>
+      <input matInput (input)="this.checkEmail($event)" (change)="this.checkEmail($event)">
+    </mat-form-field>
+    <h2 class="glitch" glitch="WE ALL LIFT DOWN HERE">WE ALL LIFT DOWN HERE</h2>
+  </div>
+  
+</ng-template>

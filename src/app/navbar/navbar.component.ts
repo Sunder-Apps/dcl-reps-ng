@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationStart, NavigationEnd } from '@angular/router';
+import { fromEvent } from 'rxjs';
+import { throttleTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   open: boolean = false
-  constructor() { }
+  scrollScription = fromEvent(window, 'scroll')
+                    .pipe(throttleTime(5000))
+                    .subscribe(() => this.open = false)
+  constructor(
+    private router:Router
+  ) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.open = false;
+      }
+    })
+  }
 
   ngOnInit() { }
 

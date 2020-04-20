@@ -22,6 +22,9 @@ import { BackgroundGradientComponent } from './background-gradient/background-gr
 import { SafePipe } from './pipes/safe.pipe';
 import { UrlSafePipe } from './pipes/url-safe.pipe';
 import { WorkoutsComponent } from './workouts/workouts.component';
+import { AuthService } from './auth/auth.service';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'
 
 @NgModule({
   declarations: [
@@ -45,10 +48,13 @@ import { WorkoutsComponent } from './workouts/workouts.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatTooltipModule,
     MatChipsModule
   ],
   providers: [
+    AuthService,
     SettingsService,
     StorageService
   ],
