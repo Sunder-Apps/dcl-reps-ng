@@ -36,3 +36,29 @@ export const RouterAnimations = trigger('routeAnimations', [
         ])
     ])
 ]);
+
+export const IntroAimation = trigger('introAnimation', [
+    transition('* => void', [
+        group([
+            style({
+                opacity: 1
+            }),
+            animate('1000ms ease', 
+                style({
+                    opacity: 0
+                })
+            ),
+            query('img', [
+                style({
+                    transform: 'scale(1) translate(-50%, -50%)',
+                    transformOrigin: '0% 4%'
+                }),
+                animate('1000ms ease', 
+                    style({
+                        transform: 'scale(20) translate(-50%, -50%)'
+                    })
+                )
+            ])
+        ])
+    ])
+]);

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { throttleTime } from 'rxjs/operators';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
-import { RouterAnimations } from './anime/anime';
+import { RouterAnimations, IntroAimation } from './anime/anime';
 import { AuthService } from './auth/auth.service';
 
 @Component({
@@ -10,7 +10,8 @@ import { AuthService } from './auth/auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less'],
   animations: [
-    RouterAnimations
+    RouterAnimations,
+    IntroAimation
   ]
 })
 export class AppComponent {
