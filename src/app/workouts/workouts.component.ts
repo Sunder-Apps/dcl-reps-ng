@@ -985,6 +985,116 @@ export class WorkoutsComponent implements OnInit {
        ]
     },
     {
+       "theme":"EXTERMINATE",
+       "description":"KB Conditioning, Steady State Cardio, Boxing Technique, Balance",
+       "sections":[
+          {
+            "name":"Warm Up",
+            "reps":[
+               {
+                  "exercises":[
+                     {
+                        "amount":"3 rounds",
+                        "name":"Jump Rope"
+                     },
+                     {
+                        "amount":"10 per direction",
+                        "name":"Hip Swings"
+                     },
+                     {
+                        "amount":"3 min",
+                        "name":"Shadow Boxing"
+                     }
+                  ]
+               }
+            ]
+          },
+          {
+             "name":"Cardio Firepower",
+             "reps":[
+                {
+                   "amount":"5x",
+                   "exercises":[
+                      {
+                         "amount":"10",
+                         "name":"2-hand KB Swings"
+                      },
+                      {
+                         "amount":"10 sec",
+                         "name":"Rest"
+                      }
+                   ]
+                },
+                {
+                  "amount":"5x",
+                  "exercises":[
+                     {
+                        "amount":"10",
+                        "name":"1-arm KB Swings"
+                     },
+                     {
+                        "amount":"10 sec",
+                        "name":"Rest"
+                     }
+                  ]
+               },
+               {
+                  "amount":"5x",
+                  "exercises":[
+                     {
+                        "amount":"10",
+                        "name":"1-arm KB Swings"
+                     },
+                     {
+                        "amount":"10 sec",
+                        "name":"Rest"
+                     }
+                  ]
+               }
+             ]
+          },
+          {
+             "name":"Rest 5 min",
+             "reps":[
+                {
+                   "exercises":[
+                      {
+                         "amount":"30 min",
+                         "name":"Run - 75% aerobic capacity"
+                      }
+                   ]
+                }
+             ]
+          },
+          {
+            "name":"PM",
+            "reps":[
+               {
+                  "amount":"3x",
+                  "exercises":[
+                     {
+                        "amount":"3 min",
+                        "name":"Heavy Bag"
+                     }
+                  ]
+               },
+               {
+                  "exercises":[
+                     {
+                        "amount": "5 min",
+                        "name": "Balance work"
+                     },
+                     {
+                        "amount": "10 min",
+                        "name": "Static Stretching"
+                     }
+                  ]
+               }
+            ]
+          }
+       ]
+    },
+    {
        "theme":"SURVIVE",
        "description":"Yoga, Breath, Cardio",
        "sections":[
