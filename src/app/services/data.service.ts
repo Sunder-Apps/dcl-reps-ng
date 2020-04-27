@@ -60,7 +60,7 @@ export class DataService {
   }
 
   getPlan (year: number, month: number): Observable<Plan> {
-    return this.httpClient.get<Plan>(`assets/plans/${year}/${month}.json`).pipe(
+    return this.httpClient.get<Plan>(`/assets/plans/${year}/${month}.json`).pipe(
       retry(1),
       catchError(this.handleError)
     )
