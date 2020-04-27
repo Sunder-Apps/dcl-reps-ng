@@ -38,11 +38,11 @@ export class DataService {
   }
 
   private validDate (year: number, month: number): boolean {
-    console.log('thisdate ', this.year, this.month)
+    console.log('thisdate ', this.year, this.month, ' passed date ', year, month)
     if (year > this.year
       || year == this.year && month > this.month
-      || this.activeYear == this.startYear && this.activeMonth < this.startMonth
-      || this.activeYear < this.startYear)
+      || year == this.startYear && this.activeMonth < this.startMonth
+      || year < this.startYear)
       return false
     return true
   }
