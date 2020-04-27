@@ -89,11 +89,10 @@ const routes: Routes = [
   },
   {
     path: '**',
-    /*component: NotFoundComponent,
+    component: NotFoundComponent,
     data: {
       animation: 'not-found'
-    }*/
-    redirectTo: '/plans/2020/04/workouts'
+    }
   }
 ];
 
