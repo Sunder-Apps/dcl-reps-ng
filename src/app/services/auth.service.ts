@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
-import { StorageService } from '../storage/storage.service';
+import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: 'root'

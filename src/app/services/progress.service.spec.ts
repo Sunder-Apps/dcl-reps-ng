@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { WorkoutsService } from './workouts.service';
+import { ProgressService } from './progress.service';
 
-describe('WorkoutsService', () => {
+describe('ProgressService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: WorkoutsService = TestBed.get(WorkoutsService);
+    const service: ProgressService = TestBed.get(ProgressService);
     expect(service).toBeTruthy();
   });
 });

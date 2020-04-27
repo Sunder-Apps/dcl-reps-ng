@@ -1,6 +1,6 @@
 <h3 class="glitch" glitch="Workouts">Workouts</h3>
-<div class="plan" *ngIf="this.plan.length; else noWorkouts">
-    <div class="day" [class.open]="workout.open" *ngFor="let workout of plan; let i = index">
+<div class="plan" *ngIf="this.plan && this.plan.workouts && this.plan.workouts.length">
+    <div class="day" [class.open]="workout.open" *ngFor="let workout of this.plan.workouts; let i = index">
         <div class="title" (click)="workout.open = !workout.open">
             <h6>{{ i + 1 }}</h6>
             <mat-chip-list>
@@ -41,12 +41,132 @@
         </div>
     </div>
 </div>
+<div id="unconverted">
+    <h3 class="glitch" glitch="These workouts have not yet been converted to the DCL Necronomicon">These workouts have not yet been converted to the DCL Necronomicon</h3>
 
-<ng-template #noWorkouts>
+    <p class="day"><span>DAY 12</span>: CONTAIN - Explosive power, posterior strength, core</p>
+    <p>Warm Up:</p>
+    <p> 5 birddogs per side  10 supermans   30 second bow pose hold  10 per leg single leg glute bridges</p>
+    <p> Internal/External rotor cuff warm up w/ light dumbbell 3x10 &#8232;Battle: Perform these circuits with the same weight on barbell (or KB or whatever you have) as many as possible with a weight you can handle for about 15 reps. Do 6-15 reps, as many as you can, 4 times.</p>
+    <p> Kettlebell or Barbell Clean &amp; Press  Front Squat  Bent Over Rows  Stiff Legged Deadlifts  Shrugs</p>
+    <p> V-Ups  Pushups  Tricep Bench Dips w/ Leg Pull In  Split Squats  Scapula Pull ups</p>
+    <p>PM 5 minutes steady state cardio, 10 burpees, 5 times.</p>
+
+    <p class="day"><span>DAY 13</span>: Exterminate - footwork, HIIT, plyometrics, Conditioning</p>
+    <p>Warm Up: Footwork circuit 30 seconds each</p>
+    <p> High Knees  Low Pogos  Speed Skaters  Crossjacks  Ali shuffle  Tuck Jumps &#8232;Sprint Combos: Do outside or on treadmill</p>
+    <p> Side shuffle 10 seconds - Crossover - Max effort sprint  x 5 per side (rest 2 minutes between)</p>
+    <p> Backwards cycle - drop to 3 point stance - Max effort sprint  x 4 (rest 2 minutes between)</p>
+    <p>Rest 5 minutes</p>
+    <p> 100 Single arm KB swings (as few sets as possible)  100 Sit Ups (as few sets as possible)  100 Other Arm KBS (you guessed it.. as few sets as possible)</p>
+    <p>PM:  10 Turkish get ups per side  Static stretching  Meditation</p>
+
+    <p class="day"><span>DAY 14</span>: Survive - Yoga, Breathing, and walking</p>
+    <p>Yoga:  1 hour practice Breath:  15 minutes box breath practice</p>
+    <p>Walk:</p>
+    <p> 20 -30 min (experiment holding breath)</p>
+    <p>Pro Tip:  We&rsquo;ve harped on the benefits of fasting quite a bit already in the &lsquo;nutrition&rsquo; section of this plan already, so I will spare you (SOME OF) the reiteration. In truth, it is not easy to do, especially if you&rsquo;re new to it. These workouts are demanding and you might feel like you need some extra fuel, as long as it falls within your eating window, go for it. BUT, know the difference between your body needing extra fuel for performance and recovery and you just wanting to eat. This is a deep learning process nd conversation between you and your body, take this time to get to know it. And reap the benefits of your fasting. Converting this into a lifestyle approach after the program is over is natural and efficient.</p>
+
+    <p class="day"><span>DAY 15</span>: Sabbath- recovery, fast, rest, embrace your inner strength to be a killing machine</p>
+    <p> Listen: Cause of Death by Obituary  Read: Autobiography of a Yogi by Paramahansa Yogananda  Quote: &ldquo;They&rsquo;re dead. They&rsquo;re fucking dead and you want to teach them tricks!&rsquo;  -Day of the Dead DAY 16: KILL - FIGHT CAMP CONDITIONING&#8230; short and sinister.</p>
+    <p>Warm up:</p>
+    <p> 1 mile jog     Combat:    5 minute shadowboxing holding weights  20 spin kicks per leg  50 punches per arm  x3 &#8232;Ladder of Death:</p>
+    <p> 50,40,30,20,10 push up burpees  10, 20, 30, 40, 50, KB swings &#8232;PM:  2 minute front lever progressions  2 minute plank  x2</p>
+    <p> 10 min static stretch</p>
+
+    <p class="day"><span>DAY 17</span>: CONTAIN - Mechanical Drop Set Torture</p>
+    <p>Warm Up:</p>
+    <p> 15 minutes farmer carries</p>
+    <p>Battle: Perform as many as possible of each</p>
+    <p> 1 arm pull up (each arm)  Weighted pull up  Renegade Row  x3</p>
+    <p> Planche or V sit hold  Clapping Push ups  Knuckle Push ups  x3</p>
+    <p> Pistol Squats (per leg)  Single Leg Deadlifts  Overhead Squats  x3</p>
+    <p> 100 KBS</p>
+    <p>PM:  Light cardio, static stretch</p>
+
+    <p class="day"><span>DAY 18</span>: EXTERMINATE - Extreme bodyweight conditioning</p>
+    <p>Warm Up:</p>
+    <p> 10 minute jog &#8232;Firepower:</p>
+    <p> 100 clapping burpees  100 mountain Climbers  100 Prisoner Squats  10 minute jog &#8232;PM:  Static Stretching   Grip Strength Trainer</p>
+
+    <p class="day"><span>DAY 19</span>:  SURVIVE - YOGA, Breath &amp; GET UPS</p>
+    <p>Yoga:  1 hour practice</p>
+    <p>Turkish Get ups:</p>
+    <p> 4x10 per side (work on breath- tight core &ldquo;breathe behind shield&rdquo;) &#8232;Pro Tip:  Taking COLD SHOWERS, even just for 1 minute, can have dramatic improvements on your overall health, inflammation levels, metabolism, autophagy, and more. We in the crypt do it every day, alternating with blood showers. In a time of crisis, hot water right not be available. So get used to the pain and learn to love it. It&rsquo;s great for recovery.</p>
+
+    <p class="day"><span>DAY 20</span>: SABBATH - Recover, Fast, Rest, Hydrate, etc</p>
+    <p> Listen: Killing Joke by Killing Joke  Read: Tao of the Wu by RZA  Quote: &ldquo;Absorb what is useful, discard what is useless, and add what is specifically your own.&rdquo; - Bruce Lee</p>
+    <p>Take your vitamins and get lots of sleep. You&rsquo;re gonna need it. The last week of this program is simple, short, and absolutely killer.</p>
+
+    <p class="day"><span>DAY 21</span>: KILL - The Kill Test  &#8232;Warm Up:  10 minutes jump rope skill practice</p>
+    <p>Kill Or Be Killed:</p>
+    <p> 1 hour of straight kickboxing, as little rest as possible  Max front lever  Max plance</p>
+    <p>PM:   15 minute farmer walk  15 minute yoga</p>
+
+    <p class="day"><span>DAY 22</span>: CONTAINMENT - Max out, Maximum Security  &#8232;Warm Up:</p>
+    <p> Full yoga flow routine  PVC Pipe Shoulder Mobility Circuit  5 minutes jump rope</p>
+    <p>Maximum Security Containment Exercise: Perform the max amount of reps on all exercises 3 times</p>
+    <p> KB Swings  Dips  Thrusters  Pull Ups  Pistol Squats  Dragon Flags</p>
+    <p>PM:  15 minutes farmer walk  15 minutes yoga / static stretch</p>
+
+    <p class="day"><span>DAY 23</span>: EXTERMINATE - Endurance battle &#8232;Warm Up:</p>
+    <p> Yoga, breathing  Hip openers  Quad stretches</p>
+    <p>Run Like Hell:</p>
+    <p> 60 Minutes sustained effort running  100 burpees</p>
+    <p>PM:</p>
+    <p> 5 Turkish Get ups Per side  10 SA KB Swings per side  x5</p>
+    <p> Static Stretching</p>
+
+    <p class="day"><span>DAY 24</span>: SURVIVE - Breathing &amp; Yoga Breathe:    &ldquo;Wim Hoff&rdquo; Method Practice for 20 minutes</p>
+    <p>Yoga:</p>
+    <p> 1 hour practice</p>
+    <p>Pro Tip:  Mediation is said to be the greatest gift you can teach some one. That being said, I am far from a licensed mediation guru, but I can attest to it helping in all areas of your life. Don&rsquo;t skip this aspect of the training.. without your mental health, which can be dreary in times like these.. the physical body hardly means much. Start by visualizing yourself inhaling peace, positivity, and healing powers.. then exhale straight fire of inflammation, negativity, anxiety, and self-doubt.</p>
+
+    <p class="day"><span>DAY 25</span>: Sabbath - You know what to do.</p>
+    <p>Truly rest and recover today, the final 3 days are gauntlet workouts designed to push you to your limit, but ultimately leave you feeling like the tactical function killing machine you have become. Fear not, once you have completed these final days, I recommend a rest day.. and a cheat meal. Then repeat. Kick ass, drink blood. Maybe not drink blood this time. Stay healthy and uninfected.</p>
+    <p> Listen: 28 Weeks Later Soundtrack by John Murphy  Read: Shit That Needs Said So You Can Kick All The Ass by Josh Coburn  Quote: &ldquo;For me life is continuously being hungry. The meaning of life is not simply to exist, to survive, but to move ahead, to go up, to achieve, to conquer.&rdquo; - Arnold</p>
+
+    <p class="day"><span>DAY 26</span>: Calisthenic Killing</p>
+    <p>Warm Up:  Max Pull up bar hang  Max Jump Rope on one foot  Max Pull Up bar hang  Max jump rope on other foot &#8232;Gauntlet:  3 Front Lever Pull ups  6 Toes to bar  9 Chin Ups  12 1 arm inverted rows per arm  x3</p>
+    <p> 3 pushup to plance hold  6 single arm push ups  9 push up to side plank  12 forearm plank to straight arm plank transfer   x3</p>
+    <p> Max pistol squats perside  20 Tuck Jumps  20 Wheel (back bends) to sit ups  Max dive-bomb push ups  x3 </p>
+    <p>PM: Boxing 12x3 minute rounds Static stretching</p>
+
+    <p class="day"><span>DAY 27</span>: CONTAIN THE KETTLEBELL    20 KBS  10 TURKISH GET UPS  20 SA KBS  10 TURKISH GET UPS  20 OPP ARM KBS   10 TURKISH GET UPS  20 ALT HAND KBS  10 TURKISH GET UPS</p>
+    <p>PM:  RUN 3 MILES</p>
+
+    <p class="day"><span>DAY 28</span>: RELOAD: GUN DAY</p>
+    <p>BICEPS &amp; TRICEPS: Cuz we gotta look good in the apocalypse too. Superset it. Like your grandma would. And once your finished reloading your weapons, we&rsquo;re gonna need them. Lock and load.</p>
+    <p> Barbell Curl  Skull Crusher</p>
+    <p> Hammer Curl  Overhead Extension    Concentration Curl  Kickback</p>
+    <p> Band Curl  Band Pressdown</p>
+    <p> Forearm Curls  Wrist Curls  Tricep Push Ups  Wrist roller  Bench Dips</p>
+    <p> That&rsquo;s all, FREAKS! You are now a certified post apocalyptic killing machine. Reaper the  rewards of your labor, enjoy some rest.</p>
+    <p>&ldquo;Death doesn&rsquo;t kill you. Boredom and indifference kill you.&rdquo; - Iggy Pop</p>
+    <p> RITUALS:</p>
+    <p>MOURNING: Let me start by saying I&rsquo;m no expert, scientist, or doctor in anything at all, even a little bit. I research a lot. I read a lot. I&rsquo;m in the health &amp; wellness field and have a few certifications, nothing that will grant me any more knowledge than you necessarily IF you truly research for yourself. That being said all recommendations I make to you freaks are just that - recommendations - tested on myself and clients that I believe to be safe and effective. I&rsquo;ve also seen more than enough of the detrimental effects of going against some recommendations, like this one.. GET ENOUGH SLEEP. 6-8 hours. Really, 8. But we&rsquo;re saying 6-8. Don&rsquo;t worry about a morning ritual to improve your well being if you can&rsquo;t do that. It starts there. NEXT</p>
+    <p>HYDRATE! Besides sleep, this is the most important thing you can do. Maybe even more so than sleep&#8230; we&rsquo;ll have to bring in The Creature From The Black Lagoon and Dr. Sleep to debate that one in more detail. Upon waking, drink a liter (or big ass glass - or 2) of water. Pro tip: squeeze lemon, lime, and shake some pink Himalayan salt in that bad boy, if you have those mineral rich - electrolyte balancing weapons handy.</p>
+    <p>BREATHE. Warrior Breath, specifically, one minute of it. For those unfamiliar, you start by exhaling completely. Then inhale RAPIDLY to fill up the diaphragm, and use the diagram to forcibly exhale the air out, then rapidly back in, then rapidly back out&#8230; hardcore as hell, like a warrior. This not only forcibly delivers oxygen and detoxifies your entire body, wakes you the hell out, and works your core &amp; diaphragm. In through your nose out through your nose or out through your mouth, switch it up and understand your breath. From there on your last exhale, exhale completey&#8230; and hold your breath until you feel the strong need to inhale.. then inhale as much as you can and HOLD IT for as long as you can&#8230; exhale controllably.</p>
+    <p>YOGA. Every day starts with a basic, 10 minute yoga flow as follows:  Standing back bend  Forward fold  Downward dog  Upward dog  Child&rsquo;s pose  Cat/Cow x3  Downward dog  High Lunge twist w/ right leg  Downward dog  High Lunge twist w/ left leg  Forward fold  Inhale &amp; rise to standing</p>
+    <p>MEDITATION. Following each morning yoga flow is a 15 minute meditation. Set a timer, background music / binaural beats if you like or perhaps a guided meditation if you are new to this. Furthermore, if you are really new to this the sound of a 15 min meditation may sound daunting and horrible, so give it a shot for 5 and work your way uo. During tough times such as these, it&rsquo;s more important to keep the mind strong and calm than anything. Meditation is the greatest exercise you can do. So fucking hit it.</p>
+    <p>COFFEE. Black. Like my soul, our futures, and how I like my music. Sponsored by Deadsled.  &#8232;SUPPLEMENT. Probiotic, Multivitamin  &#8232;READ something that isn&rsquo;t your phone for 15 minutes at least. If you&rsquo;re not a reader use this time to journal, draw, anything productive and stimulating for the rotting brain in our skulls. &#8232; WARM UP/PRE WORKOUT RITUAL:</p>
+    <p>In addition to what is written as a &lsquo;warm up&rsquo; on each day of the program, preform this before that, at the start of every workout, no matter what&#8230; even, if there&rsquo;s a fire.</p>
+    <p>YOGA&#8230; AGAIN!! I do the same exact yoga flow as in the morning ritual, only pretty fast, and swapping Warrior 1 - Warrior 2 - Triangle instead of the high lunge twists. Should take no more than 5 minutes. This is meant to serve as a dynamic warm up so do not hold the poses statically for too long.</p>
+    <p>FOAM ROLL any muscles/areas of your body that require that extra love and myofascial release.</p>
+    <p>PREPARE and LISTEN to your favorite workout jams (playlist to be found HERE).</p>
+    <p>POST WORKOUT RITUAL: &#8232;EAT what is recommended to be your first real, caloric-dense meal of the day.  SUPPLEMENT with additional vitamins, protein powder, or amino acids if needed. REST let your cortisol levels lower and recover. LATER&#8230;. Take a COLD SHOWER. It works wonders on recovery, metabolism, and willpower.</p>
+    <p>RITUAL OF THE NIGHT:</p>
+    <p>STOP looking at your phone, the computer, TV, etc&#8230; approx 2 hours before bed for best sleep results. I understand this is not as easy as it sounds like it should be, do your best. Blue light keeps you awake, basically..interrupting your internal clock, your circadian rhythm. And when this is off balance, so is your body, in just about every way. Do your best to combat this madness we have taken upon as a societal norm.  &#8232;SUPPLEMENT if needed. I take D3 &amp; ZMA before bed.</p>
+    <p>FUN ALTERNATE EXERCISE/ VIDEO IDEAS:  Farmer Walks w/ AMPS  Hanging Zombie/Corpse Punching Bag  Severed Head Speed Bag  Chainsaw Slashes (w/ lunge)  Barbarian Squats w/ chainsaw or shovel  Cinder Block Throws (instead of bed ball slams) (wreck shit)  Zombie Entrails Battle Ropes and Resistance Band training</p>
+    <p></p>
+    <p>&ldquo;Yesterday I was clever, so I wanted to change the world. Today I am wise, so I cam changing myself.&rdquo; Rumi</p>
+</div>
+
+<!--ng-template #noWorkouts>
     <h4 id="wasting">Wasting your quarantine away on the couch?</h4>
     <label for="loadWorkouts">
         <span>LOAD A WORKOUT PLAN</span>
         <img src="https://i.imgur.com/UHWbMdg.png" />
     </label>
     <input id="loadWorkouts" type="file" (change)="this.loadPlan($event)" />
-</ng-template>
+</ng-template-->

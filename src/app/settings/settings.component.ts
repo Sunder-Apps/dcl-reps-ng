@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core'
-import { SettingsService } from './settings.service'
+import { SettingsService } from '../services/settings.service'
 
-import { Settings, Theme } from './settings'
-import { StorageService } from '../storage/storage.service';
+import { Settings, Theme } from '../objects/settings'
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-settings',

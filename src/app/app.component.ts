@@ -3,7 +3,7 @@ import { fromEvent } from 'rxjs';
 import { throttleTime } from 'rxjs/operators';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { RouterAnimations, IntroAimation } from './anime/anime';
-import { AuthService } from './auth/auth.service';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
