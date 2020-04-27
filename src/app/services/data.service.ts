@@ -49,6 +49,7 @@ export class DataService {
   setPlan (year: number, month: number): Observable<Plan> {
     if (this.validDate(year, month)) {
       this.getPlan(year, month).subscribe(plan => {
+        console.log(plan)
         this.activeYear = year
         this.activeMonth = month
         this.storageService.set('activeYear', year.toString())
