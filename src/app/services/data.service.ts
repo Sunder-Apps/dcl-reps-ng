@@ -38,6 +38,7 @@ export class DataService {
   }
 
   private validDate (year: number, month: number): boolean {
+    console.log('thisdate ', this.year, this.month)
     if (year > this.year
       || year == this.year && month > this.month
       || this.activeYear == this.startYear && this.activeMonth < this.startMonth
@@ -49,15 +50,16 @@ export class DataService {
   setPlan (year: number, month: number): Observable<Plan> {
     console.log('setplan')
     if (this.validDate(year, month)) {
+      console.log('validdate')
       this.getPlan(year, month).subscribe(plan => {
-        console.log(plan)
+        console.log('dataplan ', plan)
         this.activeYear = year
         this.activeMonth = month
         this.storageService.set('activeYear', year.toString())
         this.storageService.set('activeMonth', month.toString())
         this.subActivePlan.next(plan)
       })
-    }
+    }console.log('setplanend')
     return this.obsActivePlan
   }
 
