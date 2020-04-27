@@ -21,7 +21,9 @@ export class WorkoutsComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private alertsService: AlertsService,
     private dataService: DataService
-  ) {
+  ) { }
+
+  ngOnInit () {
     this.activatedRoute.paramMap
       .pipe(
         switchMap((params: ParamMap) => {
@@ -49,6 +51,4 @@ export class WorkoutsComponent implements OnInit {
         console.log(this.plan)
       })
   }
-
-  ngOnInit () { }
 }
