@@ -24,13 +24,11 @@ export class WorkoutsComponent implements OnInit {
   ) { }
 
   ngOnInit () {
-    console.log('ngoninit in workouts')
     this.activatedRoute.paramMap
       .pipe(
         switchMap((params: ParamMap) => {
           this.year = Number(params.get('year'))
           this.month = Number(params.get('month'))
-          console.log('workouts switchmap ', this.year, this.month)
           return this.dataService.setPlan(this.year, this.month)
         })
       )
@@ -49,7 +47,6 @@ export class WorkoutsComponent implements OnInit {
             })
             this.router.navigate(['plans', this.plan.year.toString(), this.plan.month.toString(), 'workouts'])
           }
-        console.log('workouts plan ', this.plan)
       })
   }
 }
