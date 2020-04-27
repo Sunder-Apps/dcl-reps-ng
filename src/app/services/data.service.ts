@@ -41,7 +41,7 @@ export class DataService {
     console.log('thisdate ', this.year, this.month, ' passed date ', year, month)
     if (year > this.year
       || year == this.year && month > this.month
-      || year == this.startYear && this.activeMonth < this.startMonth
+      || year == this.startYear && month < this.startMonth
       || year < this.startYear)
       return false
     return true
