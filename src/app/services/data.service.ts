@@ -47,6 +47,7 @@ export class DataService {
   }
 
   setPlan (year: number, month: number): Observable<Plan> {
+    console.log('setplan')
     if (this.validDate(year, month)) {
       this.getPlan(year, month).subscribe(plan => {
         console.log(plan)
